@@ -1,4 +1,4 @@
-A container that behaves like a dynamic array, has stable handle-like keys and O(1) element query time with no hashing.
+A container that behaves like a dynamic array, has stable handle-like keys, O(1) element query time with no hashing.
 
 ### The premise
 
@@ -8,8 +8,8 @@ A container that behaves like a dynamic array, has stable handle-like keys and O
 * O(1) time insertion, swapRemove
 * No pre-calculation, or building indices, or hidden spikes of computation (except for buffer reallocation on growth, which can be pre-allocated), and no caches that needs to be invalidated
 * No hashing
-* Memory overhead per element (how much depends on the implementation)
-* Sligtly more expensive insertion and removal compared to std::vector (TODO: add benchmarks)
+* Additional memory overhead per element (the value of the overhead depends on the implementation)
+* More expensive insertion and removal compared to std::vector (see [benchmarks](https://github.com/gameraccoon/sparse-set-container-cpp-tests))
 
 ### High-level design
 
