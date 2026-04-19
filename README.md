@@ -60,4 +60,4 @@ SparseSetContainer_Trivial - the most trivial implementation of sparse set:
 * The validity of the keys can't be checked, as soon as the value by the key is removed, using that key is prohibited.
 * Only one array of values is stored per container.
 * Epochs are not used.
-* Uses uint16 as indexes, and can store up to 4294967294 elements.
+* Uses uint32 as indexes, and can store up to 4294967294 elements.
