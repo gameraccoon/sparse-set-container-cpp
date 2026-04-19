@@ -61,3 +61,7 @@ SparseSetContainer_Trivial - the most trivial implementation of sparse set:
 * Only one array of values is stored per container.
 * Epochs are not used.
 * Uses uint32 as indexes, and can store up to 4294967294 elements.
+
+### Benchmarks
+
+Benchmarks and tests can be found here: https://github.com/gameraccoon/sparse-set-container-cpp-tests
