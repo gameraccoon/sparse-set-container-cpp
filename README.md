@@ -26,13 +26,13 @@ The container is usually composed of:
 An occupied element stores the index to the corresponding element of dense array and the epoch of the value.
 A free element stores the next free index of the "free list" and the next epoch that the value in the current position will have.
 
-The design of the container is based on the design descibed by [articles](https://skypjack.github.io) from [Michele skypjack Caini](https://github.com/skypjack) and [this paragraph](https://gameprogrammingpatterns.com/object-pool.html#a-free-list) from Game Programming Patterns book from Bob Nystrom.
+The design of the container is based on the design descibed by ["ECS back and forth" articles](https://skypjack.github.io) from [Michele skypjack Caini](https://github.com/skypjack) and ["A free list" pattern](https://gameprogrammingpatterns.com/object-pool.html#a-free-list) from Game Programming Patterns book from Bob Nystrom.
 
 ### Implementation considerations
 
 There are many ways to implement the structure based on these considerations:
-* Whether manual memory management is acceptable (to reduce the number of the internal buffer allocation)
-  * This affects whether the container manages the memory manually, or other data structure implementations (such as std::array) are used internally.
+* Whether manual memory management is acceptable (to reduce the number of the internal buffer allocations)
+  * This affects whether the container manages the memory manually, or other data structure implementations (such as std::vector) are used internally.
 * Whether the container is intended to "own" the stored values, or the values are onwed by other parts of the application.
   * If the container in not owning the values, it can enforse the users to store and maintain the keys to maintain the lifetime of the elements (when they should be removed from the array), which can affect the design of the keys, but also can simplify the implementation.
 * Whether the user should be able to check the validity of keys.
