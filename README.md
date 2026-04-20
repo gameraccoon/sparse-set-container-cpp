@@ -3,7 +3,7 @@ A container that behaves like a dynamic array, has stable handle-like keys, O(1)
 ### The premise
 
 * Tightly packed values, with iteration performance comparable to std::vector
-* Stable handle-like keys, removing elements from the middle doesn't invalidate the handles
+* Stable handle-like keys, removing elements from the middle doesn't invalidate the keys
 * O(1) time access by key, O(1) access by index
 * O(1) time insertion, swapRemove
 * No pre-calculation, or building indices, or hidden spikes of computation (except for buffer reallocation on growth, which can be pre-allocated), and no caches that needs to be invalidated
