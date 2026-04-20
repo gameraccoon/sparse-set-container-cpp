@@ -44,7 +44,7 @@ There are many ways to implement the structure based on these considerations:
 * What are the maximum number of elements (and number of element removals if "epoch overflow" is not handled) that the container should support.
   * This affects what integer types should be used in the implementation.
 
-As an example, the Rust [sparse_set_container](github.com/gameraccoon/sparse_set_container) implementation makes these choices:
+As an example, the Rust [sparse_set_container](https://github.com/gameraccoon/sparse_set_container) implementation makes these choices:
 * Manual memory management is acceptable. All three arrays are stored in the same block of the memory, one after another.
 * The array owns the values.
 * The validity of keys should be able to be checked.
