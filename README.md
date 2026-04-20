@@ -54,7 +54,8 @@ As an example, the Rust [sparse_set_container](github.com/gameraccoon/sparse_set
 
 ### Implementations available in this repo
 
-SparseSetContainer_Trivial - the most trivial implementation of sparse set:
+#### SparseSetContainer_Trivial - the most trivial implementation of sparse set container
+
 * No manual memory management, each array is implemented as std::vector and allocates separately.
 * The array does not own the values, the app should manage their lifetime and key validity.
 * The validity of the keys can't be checked, as soon as the value by the key is removed, using that key is prohibited.
